@@ -76,11 +76,11 @@ fmt.Scan(&teamPosition)
  fmt.Printf("win percentage is :%v\n",result)
  goalavg(scored,conced,mostScore,mostConced)
 tableranking(teamsnr,teamPosition)
+//Team two 2
 
-
-var teamOneW,teamTwoD,teamTwoL float32 
-	var teamOne string
-fmt.Print("enter team 2:")
+var teamTwoW,teamTwoD,teamTwoL float32 
+	var teamTwo string
+fmt.Println("enter team 2:")
 //5 last games second team
 fmt.Scan(&teamTwo)
 fmt.Printf("out of 5 games how many wins:\n")
@@ -90,27 +90,43 @@ fmt.Scan(&teamTwoD)
 fmt.Printf("out of 5 games how many Losses:\n")
 fmt.Scan(&teamTwoL)
 fivelastG(teamTwoW,teamTwoD,teamTwoL)
- resulttwo:=fivelastG(teamOneW,teamOneD,teamOneL)
+ resulttwo:=fivelastG(teamTwoW,teamTwoD,teamTwoL)
 
 //goalavg second team
  var mostScore2,mostConced2,scored2,conced2 float32
  fmt.Println("Most leuage goals scored:")
- fmt.Scan(&mostScore)
+ fmt.Scan(&mostScore2)
  fmt.Println("Most leuage goals conceded:")
-  fmt.Scan(&mostConced)
+  fmt.Scan(&mostConced2)
   fmt.Println("Team goals scored:")
-   fmt.Scan(&scored)
+   fmt.Scan(&scored2)
    fmt.Println("Team goals conced:")
-   fmt.Scan(&conced)
+   fmt.Scan(&conced2)
+
+//national table ranking of team 2
+var teamsnr2,teamPosition2 float32
+fmt.Println("How many points does the table leader have:")
+ fmt.Scan(&teamsnr2)
+ fmt.Println("How many points does your team have:")
+fmt.Scan(&teamPosition2)
+
+
+
+fmt.Printf("%s:\n",teamOne)
+ fmt.Printf("win percentage is :%v\n",result)
+ goalavg(scored,conced,mostScore,mostConced)
+tableranking(teamsnr,teamPosition)
+
+
 
 
 fmt.Printf("%s:\n",teamTwo)
 fmt.Printf("win percentage is :%v\n",resulttwo)
 goalavg(scored2,conced2,mostScore2,mostConced2)
-/*
+tableranking(teamsnr2,teamPosition2)
 
-fmt.Print("enter team 1")
-fmt.Scan(&teamTwo)
+//team1winning
 
-*/
+
+
 }
